@@ -1,0 +1,20 @@
+# Package and build directories
+node_modules/
+dist/
+build/
+temp/
+.next/
+
+# Environment files
+.env
+.env.*
+!.env.example
+
+# SQLite Database Files
+*.db
+*.database
+
+# Logs
+logs
+*.log
+npm-debug.log*
