@@ -1,0 +1,41 @@
+{
+  "name": "nps-service-api",
+  "version": "1.0.0",
+  "description": "Esse projeto foi criado com base na trilha de Node.js da quarta edição do Next Level Week da Rockseat, onde criamos uma aplicação web para o gerenciamento de pesquisas de satisfação de clientes (Net Promoter Score), que é uma métrica muito importante de negócio para acompanhamento do relacionamento com os clientes.",
+  "main": "index.js",
+  "scripts": {
+    "dev": "tsx --watch ./src/index.ts",
+    "test": "node --experimental-vm-modules ./node_modules/jest/bin/jest.js --runInBand .",
+    "test:watch": "node --experimental-vm-modules ./node_modules/jest/bin/jest.js --watchAll --runInBand ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wander-alves/rocketseat-nlw04-node.git"
+  },
+  "keywords": [],
+  "author": "Wanderson Alves (https://github.com/wander-alves)",
+  "license": "MIT",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/wander-alves/rocketseat-nlw04-node/issues"
+  },
+  "homepage": "https://github.com/wander-alves/rocketseat-nlw04-node#readme",
+  "devDependencies": {
+    "@biomejs/biome": "^2.4.6",
+    "@types/express": "^5.0.6",
+    "@types/node": "^25.4.0",
+    "jest": "^30.3.0",
+    "sqlite3": "^5.1.7",
+    "ts-jest": "^29.4.6",
+    "ts-node": "^10.9.2",
+    "tsx": "^4.21.0",
+    "typescript": "^5.9.3"
+  },
+  "dependencies": {
+    "dotenv": "^17.3.1",
+    "express": "^5.2.1",
+    "reflect-metadata": "^0.2.2",
+    "typeorm": "^0.3.28",
+    "zod": "^4.3.6"
+  }
+}
