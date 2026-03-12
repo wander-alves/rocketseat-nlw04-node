@@ -9,7 +9,9 @@ Esse projeto foi criado com base na trilha de Node.js da quarta edição do Next
 
 ### Regras de negócio
 
-- [ ] Os clientes serão cadastrados através do fluxo de criação de conta via aplicativo.
+- [x] Os clientes serão registrados pela plataforma de pesquistas através do nome e e-mail.
+  - Deve haver uma validação de e-mail
+  - Um nome não poderá ser aceito com menos de 3 caracteres.
 - [ ] Os usuários poderão avaliar os serviços através dos seus títulos com uma descrição da nota
   - A nota deverá ser numérica
 - [ ] Disparo de e-mails
@@ -108,6 +110,39 @@ npm run dev
 }
 ```
 
+`biome.json`
+```json
+{
+  "formatter": {
+    "indentStyle": "space",
+    "indentWidth": 2,
+    "lineWidth": 80
+  },
+  "javascript": {
+    "formatter": {
+      "arrowParentheses": "always",
+      "jsxQuoteStyle": "double",
+      "quoteStyle": "single",
+      "semicolons": "always",
+      "trailingCommas": "all"
+    }
+  },
+  "linter": {
+    "enabled": true,
+    "rules": {
+      "recommended": true,
+      "a11y": {
+        "noSvgWithoutTitle": "off"
+      },
+      "suspicious": {
+        "noArrayIndexKey": "info"
+      }
+    }
+  }
+}
+
+```
+
 **Jest**
 
 Configuração do Jest para executar o ambiente com TypeScript:
@@ -136,11 +171,13 @@ const config: Config = {
 
 export default config;
 ```
-*Inserir no script de teste a instrução para uso da virtualização opcional conforme documentação do Jest
+
+*Inserir no script de teste a instrução para uso da virtualização  conforme documentação do Jest*
+
 
 `package.json`
 ```
 ...
-  "test": "node --use-vm-experimental-modules ./node_modules/jest/jest.js ."
+  "test": "node --vm-experimental-modules ./node_modules/jest/jest.js ."
 ...
 ```
