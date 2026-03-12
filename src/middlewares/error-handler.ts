@@ -1,5 +1,5 @@
 import type { NextFunction, Request, Response } from 'express';
-import { ZodError } from 'zod/v3';
+import { ZodError } from 'zod';
 
 import { AppError } from '../errors/app-error';
 import { zodErrorsParser } from '../utils/zod-errors-parser';
@@ -15,9 +15,10 @@ function errorHandler(
       message: error.message,
     });
   }
+
   if (error instanceof ZodError) {
-    const errors = zodErrorsParser(error.issues);
-    return response.status(500).json({
+    const errors = zodErrorsParser(error);
+    return response.status(400).json({
       message: 'An validation error has occured.',
       errors,
     });
