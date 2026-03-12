@@ -1,11 +1,13 @@
-import type { ZodIssue } from 'zod/v3';
+import type { ZodError } from 'zod';
 
-function zodErrorsParser(errors: ZodIssue[]): Record<string, string>[] {
-  return errors.map((error) => {
+function zodErrorsParser(error: ZodError): Record<string, string>[] {
+  const errors = error.issues.map((error) => {
     return {
       [error.path[0]]: error.message,
     };
   });
+
+  return errors;
 }
 
 export { zodErrorsParser };
