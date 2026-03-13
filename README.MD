@@ -12,9 +12,10 @@ Esse projeto foi criado com base na trilha de Node.js da quarta edição do Next
 - [x] Os clientes serão registrados pela plataforma de pesquistas através do nome e e-mail.
   - Deve haver uma validação de e-mail
   - Um nome não poderá ser aceito com menos de 3 caracteres.
-- [ ] Os usuários poderão avaliar os serviços através dos seus títulos com uma descrição da nota
-  - A nota deverá ser numérica
-- [ ] Disparo de e-mails
+- [x] Os usuários poderão criar pesquisas para avaliação de satisfação dos clientes com os produtos
+  - Uma pesquisa deverá conter um título e uma descrição
+- [ ] Os usuários deverão conseguir listar os usuários para poder associar com as pesquisas.
+- [ ] As pesquisas serão disparadas por e-mail
   - Seguir boas práticas para construção de um e-mail, vide [MailChimp](https://templates.mailchimp.com/getting-started/html-email-basics/)
     - O e-mail deve ter a largura entre 600px a 800px.
     - O design deve ser simples, para ter maior compatibilidade com os clients de e-mail (usar tabelas e grids).
@@ -26,7 +27,9 @@ Esse projeto foi criado com base na trilha de Node.js da quarta edição do Next
     - Prefira estilizações explícitas ao invés de shorthand.
     - Utilize estratégias para tornar as estilizações inline ao compilar o arquivo ao montar o HTML final para maior compatibilidade.
     - Utilize links absolutos para imagens e para hospedar os arquivos, utilize serviços confiáveis, como o Microsoft Bloob Storage, S3, etc.
-- [ ] Os administradores devem ter acesso a métrica NPS
+- [ ] As respostas enviadas pelos clientes deverão ser únicas e atualizar a nota da pesquisa.
+  - Cada pesquisa só poderá ser respondida por um usuário uma única vez.
+- [ ] Os usuários devem ter acesso a métrica NPS
   - Referência: [Salesforce - Net Promoter Score](https://www.salesforce.com/br/blog/net-promoter-score/)
   - Fórmula: NPS = (Total Promotores -Total Detratores) / Total
   - Detratores: Notas entre 0 e 6
@@ -37,7 +40,6 @@ Esse projeto foi criado com base na trilha de Node.js da quarta edição do Next
     - 50% ~ 74%: Muito bom
     - 25% ~ 49%: Razoável
     - <25%: Ruim
-- [ ] Os administradores do sistema serão cadastrado pelo time de suporte manualmente.
 
 ### Melhorias
 - [ ] Adaptação para utilizar as versões mais atuais dos módulos, respeitando a estrutura do projeto.
