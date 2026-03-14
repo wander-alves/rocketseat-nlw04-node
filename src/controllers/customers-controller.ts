@@ -30,6 +30,21 @@ class CustomersController {
 
     return response.status(201).send();
   }
+
+  async list(request: Request, response: Response) {
+    const customerParamSchema = z.object({
+      page: z.coerce.number().optional().default(1),
+    });
+
+    const { page } = customerParamSchema.parse(request.query);
+
+    const customers = await customersRepository.find({
+      skip: (page - 1) * 10,
+      take: 10,
+    });
+
+    return response.json(customers);
+  }
 }
 
 export { CustomersController };

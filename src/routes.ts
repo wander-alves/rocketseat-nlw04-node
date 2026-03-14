@@ -8,6 +8,8 @@ const customersController = new CustomersController();
 const surveysController = new SurveysController();
 
 routes.post('/customers', customersController.create);
+routes.get('/customers', customersController.list);
+
 routes.post('/surveys', surveysController.create);
 routes.get('/surveys', surveysController.list);
 
