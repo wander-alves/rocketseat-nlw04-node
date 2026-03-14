@@ -20,6 +20,21 @@ class SurveysController {
 
     return response.status(201).json(survey);
   }
+
+  async list(request: Request, response: Response) {
+    const surveyParamsSchema = z.object({
+      page: z.coerce.number().optional().default(1),
+    });
+
+    const { page } = surveyParamsSchema.parse(request.query);
+
+    const surveys = await surveysRepositories.find({
+      skip: (page - 1) * 10,
+      take: 10,
+    });
+
+    return response.json(surveys);
+  }
 }
 
 export { SurveysController };
