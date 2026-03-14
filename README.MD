@@ -16,7 +16,8 @@ Esse projeto foi criado com base na trilha de Node.js da quarta edição do Next
   - Uma pesquisa deverá conter um título e uma descrição
 - [x] Os usuários poderão listar as pesquisas.
   - As respostas devem ser paginadas com 10 itens por página.
-- [ ] Os usuários deverão conseguir listar os clientes para poder associar com as pesquisas.
+- [x] Os usuários deverão conseguir listar os clientes para poder associar com as pesquisas.
+  - As respostas devem ser paginadas com 10 itens por página.
 - [ ] As pesquisas serão disparadas por e-mail
   - Seguir boas práticas para construção de um e-mail, vide [MailChimp](https://templates.mailchimp.com/getting-started/html-email-basics/)
     - O e-mail deve ter a largura entre 600px a 800px.
