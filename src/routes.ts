@@ -9,5 +9,6 @@ const surveysController = new SurveysController();
 
 routes.post('/customers', customersController.create);
 routes.post('/surveys', surveysController.create);
+routes.get('/surveys', surveysController.list);
 
 export { routes };
